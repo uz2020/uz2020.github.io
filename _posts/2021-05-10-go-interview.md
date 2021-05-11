@@ -4,6 +4,39 @@ title:  "Go面试题"
 ---
 
 1. new和make的区别
+
+    **new**: 
+    1. The new built-in function allocates memory. The first
+    argument is a type, not a value.
+    2. The value returned is a **pointer** to a newly allocated zero value
+    of that type.
+
+    **make**:
+    1. The make built-in function allocates and initializes an object of type
+        slice, map, or chan (only). 
+        
+    2. Like new, the first argument is a type, not a value. Unlike
+        new, make's return type is the same as the type of its
+        argument, **not a pointer** to it. 
+        
+    3. The specification of the result depends on the type: 
+       1. **Slice**: The size specifies the length. The capacity of the
+        slice is equal to its length. A second integer argument may be
+        provided to specify a different capacity; it must be no
+        smaller than the length. For example, make([]int, 0, 10)
+        allocates an underlying array of size 10 and returns a slice
+        of length 0 and capacity 10 that is backed by this underlying
+        array.
+        
+       2. **Map**: An empty map is allocated with enough space to
+        hold the specified number of elements. The size may be
+        omitted, in which case a small starting size is allocated.
+        
+       3. **Channel**: The channel's buffer is initialized with the
+        specified buffer capacity. If zero, or the size is omitted,
+        the channel is unbuffered.
+
+    
 2. 进程、线程、协程的区别
 
     The differences between threads and goroutines are essentially quantitative, not qualitative.
@@ -72,7 +105,7 @@ title:  "Go面试题"
 5. 数组和切片的不同?
 6. 数组和切片传参方式? 传值还是指针?
 7. RWMutex的实现?
-8. buffered channel和unbuffered channel?
+8. buffered channel和unbuffered channel的区别?
 9. 什么是并发? 什么是并发安全?
 
     When we cannot confidently say that one event happens before the

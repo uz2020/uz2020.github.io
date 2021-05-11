@@ -72,3 +72,18 @@ title:  "Go面试题"
 5. 数组和切片的不同?
 6. 数组和切片传参方式? 传值还是指针?
 7. RWMutex的实现?
+8. buffered channel和unbuffered channel?
+9. 什么是并发? 什么是并发安全?
+
+    When we cannot confidently say that one event happens before the
+    other, then the events x and y are **concurrent**.
+    
+    Consider a function that works correctly in a sequential
+    program. That function is **concurrency-safe** if it continues to
+    work correctly even when called concurrently, that is, from two or
+    more goroutines with no additional synchronization.
+
+    We can generalize this notion to a set of collaborating functions,
+    such as the methods and operations of a particular type. A
+    **type** is concurrency-safe if all its accessible methods and
+    operations are concurrency-safe.

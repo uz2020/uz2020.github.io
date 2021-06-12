@@ -3,128 +3,25 @@ layout: post
 title:  "Go面试题"
 ---
 
-1. new和make的区别
 
-    **new**: 
-    1. The new built-in function allocates memory. The first
-    argument is a type, not a value.
-    2. The value returned is a **pointer** to a newly allocated zero value
-    of that type.
+由于这篇博客原内容*很废*{:.green}，因此已删除。
 
-    **make**:
-    1. The make built-in function allocates and initializes an object of type
-        slice, map, or chan (only). 
-        
-    2. Like new, the first argument is a type, not a value. Unlike
-        new, make's return type is the same as the type of its
-        argument, **not a pointer** to it. 
-        
-    3. The specification of the result depends on the type: 
-       1. **Slice**: The size specifies the length. The capacity of the
-        slice is equal to its length. A second integer argument may be
-        provided to specify a different capacity; it must be no
-        smaller than the length. For example, make([]int, 0, 10)
-        allocates an underlying array of size 10 and returns a slice
-        of length 0 and capacity 10 that is backed by this underlying
-        array.
-        
-       2. **Map**: An empty map is allocated with enough space to
-        hold the specified number of elements. The size may be
-        omitted, in which case a small starting size is allocated.
-        
-       3. **Channel**: The channel's buffer is initialized with the
-        specified buffer capacity. If zero, or the size is omitted,
-        the channel is unbuffered.
+---
 
-    
-2. 进程、线程、协程的区别
+<br />
 
-    The differences between threads and goroutines are essentially quantitative, not qualitative.
-    
-    **Stack**: 
-    1. Each OS thread has a fixed-size block of memory (often as large
-        as 2MB) for its stack, the work area where it saves the local
-        variables of function calls that are in progress or temporarily
-        suspended while another function is called.
-    
-    2. A goroutine’s stack, like the stack of an OS thread, holds the local
-        variables of active and suspended function calls, but unlike an OS
-        thread, a goroutine’s stack is not fixed; it grows and shrinks as
-        needed.
-    
-    **Scheduling**: 
-    1. OS threads are scheduled by the OS kernel. Every few
-        milliseconds, a hardware timer interrupts the processor, which
-        causes a kernel function called the scheduler to be invoked. This
-        function suspends the currently executing thread and saves its
-        registers in memory, looks over the list of threads and decides
-        which one should run next, restores that thread’s registers from
-        memory, then resumes the execution of that thread. Because OS
-        threads are scheduled by the kernel, passing control from one
-        thread to another requires a full context switch.
-        
-    2. The Go runtime contains its own scheduler that uses a technique
-        known as m:n scheduling, because it multiplexes (or schedules) m
-        goroutines on n OS threads.
-        
-        Unlike the operating system’s thread scheduler, the Go scheduler is not invoked periodically
-        by a hardware timer, but implicitly by certain Go language constructs. For example, when a
-        goroutine calls time.Sleep or blocks in a channel or mutex operation, the scheduler puts it to
-        sleep and runs another goroutine until it is time to wake the first one up. Because it doesn’t
-        need a switch to kernel context, rescheduling a goroutine is much cheaper than rescheduling a
-        thread.
-        
-    **identity**:
-    1. In most operating systems and programming languages that
-        support multithreading, the cur- rent thread has a distinct identity
-        that can be easily obtained as an ordinary value, typically an integer
-        or pointer. This makes it easy to build an abstraction called
-        thread-local storage, which is essentially a global map keyed by
-        thread identity, so that each thread can store and retrieve values
-        independent of other threads.
-        
-    2. Goroutines have no notion of identity that is accessible to the
-        programmer. This is by design, since thread-local storage tends to be
-        abused.
-        
-        Just as with programs that rely excessively on global
-        variables, this can lead to an unhealthy ‘‘action at a distance’’ in
-        which the behavior of a function is not determined by its arguments
-        alone, but by the identity of the thread in which it runs.
-    
-3. 有几种锁?
+之前逛虎扑步行街，有人说自己侄女在上高中，每晚都学习到一两点，但成绩还
+是全班倒数，家人都为她着急，因此发帖求助。有人评论说，这种人总是把笔记
+做得很漂亮很详尽，但不爱动脑子，想用这种不用脑子的劳动来替代思考。事实
+上只要是重要的内容，课本上都已经有讲解了，抄下来又有什么意义呢？
 
-   Mutex和RWMutex。
-   
-   一个协程获得Mutex以后，其它协程需要等待这个协程释放Mutex。
-   
-   而RWMutex用于单写多读。在读锁（调用RLock()）占用的情况下，会阻止写，
-   但不会阻止读。而写锁（Lock()）会阻止任何其他协程（无论读和写）进来。
-   
-4. 如何限制协程数量?
-5. 数组和切片的不同?
-6. 数组和切片传参方式? 传值还是指针?
+虽然这个道理我懂，但我也经常做这种傻事。看别人做摘抄，自己也做，记录到
+本子或者博客上，却再也不去看了。正视自己的这个坏毛病，我今天就在整理一
+些“摘抄”博客。然后就找到了这篇，发现里面摘抄了很多书本上的句子，觉得自
+己真的是够傻的。所以就全删了，而且，这一篇也不打算再写什么内容，因
+为，__关于面试我真的提不起兴趣。__
 
-    Go里所有的参数传递都是传值。
-    
-    切片包含三个元素:
-    1. 指向原生数组的指针
-    2. 数组切片中的元素个数
-    3. 数组切片已分配的存储空间
-    
-7. RWMutex的实现?
-8. buffered channel和unbuffered channel的区别?
-9. 什么是并发? 什么是并发安全?
-
-    When we cannot confidently say that one event happens before the
-    other, then the events x and y are **concurrent**.
-    
-    Consider a function that works correctly in a sequential
-    program. That function is **concurrency-safe** if it continues to
-    work correctly even when called concurrently, that is, from two or
-    more goroutines with no additional synchronization.
-
-    We can generalize this notion to a set of collaborating functions,
-    such as the methods and operations of a particular type. A
-    **type** is concurrency-safe if all its accessible methods and
-    operations are concurrency-safe.
+我认为做出这种“摘抄”的事情的人，多半是受到打击了，失信心才会这么做，潜
+意识里不愿意承认自己想不明白，有一种想要通过摘抄了自欺欺人的冲动。举个
+例子，我妈妈最近想学点文化，她的做法是不加思考地抄书。我想，这也是因为
+她对自己没有信心吧，她很怕自己学不会。

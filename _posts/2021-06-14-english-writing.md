@@ -3,7 +3,7 @@ layout: post
 title:  "英语写作"
 ---
 
-## 关于double t
+## 关于double辅音
 
 > writing or writting?
 
@@ -61,9 +61,6 @@ foreign speaker总是很容易陷入一个直译的陷阱。想要表达明白�
 
 好了，我有一些累了。学海无涯，等我养精蓄锐之后，与之再战三百回合岂不妙哉！
 
----
-<br />
-
 > This is a nonsense question.
 
 > I don't know where you even got the idea that it should be writting,
@@ -92,6 +89,8 @@ indeed是non-native speaker很少用的一个词。一般我们会说：the ques
 is nonsensical。加上quite和indeed有什么好处？我认为加上这两个词以后，
 这句话表达的就是我的观点。如果没有它们，就显得这已经是冷冰冰的事实了。
 
+native speaker用actually也用得多。我也说不清用它有何作用。
+
 > there are also some real gems among the results for writting.
 
 这里面也有一些有用的东西。我会译成：there are also some
@@ -100,3 +99,19 @@ useful/valuable points/things/stuffs in it.
 real gems就代表了有用的东西。比我们用的things/stuffs生动多了。但像这样
 的表达方式放在口语应该没问题，不过如果用在和non-native speaker对话的话
 估计就容易翻车了。
+
+## 写段落
+
+虽然我们都喜欢洋洋洒洒地写文章，但写出来效果还是要看我们是否有一个清晰
+的思路。如果总是写到哪算哪，那么自己写得是爽，读者却读不爽了。所以写文
+章要有计划。首先要知道整篇文章的主题，然后要清楚所有段落的主题和作用。
+
+> First, ... Then ...
+
+首先、然后、接着（英语要怎么表达？）。也有的用First, ... Secondly,
+... 不过还是用then比较自然一些吧。
+
+我感觉写作如果是应付考试，并不需要特别强有力的说法。考试考察的是组织语
+言的能力。比如把观点有序陈列的能力，已经理清观点之间关系的能力。毕竟考
+试时间那么短，不可能思考得很有深度，考官也不会指望考生能在二三十分钟写
+出很正式的文章来。

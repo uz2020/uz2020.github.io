@@ -1,0 +1,10 @@
+version: '2.4'
+
+services:
+  jekyll:
+    command: bundle exec jekyll serve -l
+    image: bretfisher/jekyll-serve
+    volumes:
+      - .:/site
+    ports:
+      - '8080:4000'

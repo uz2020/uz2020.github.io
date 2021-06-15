@@ -60,3 +60,43 @@ foreign speaker总是很容易陷入一个直译的陷阱。想要表达明白�
 作为工具，但也可以成为艺术，就看每个人的追求是什么了。
 
 好了，我有一些累了。学海无涯，等我养精蓄锐之后，与之再战三百回合岂不妙哉！
+
+---
+<br />
+
+> This is a nonsense question.
+
+> I don't know where you even got the idea that it should be writting,
+> that's totally wrong, just stop doing it.
+
+这位提问者挺可怜的，作为foreign speaker有这样的疑问正常得很，却被这样
+怒怼。在native speaker看来，这是无厘头的问题。
+
+我不知道你为什么这么想。我不知道你这个想法从哪里来。也许我会直译为：I
+don't know why you think in that way.
+
+两种表达方式的区别是什么呢？也许native speaker更喜欢用have/got之类的说
+法？它们会把想法抽象出来，而不像我们动不动就I think blah blah blah。
+
+地道的说法，似乎更习惯用be动词和have/get之类的动词。也许他们这样的用法
+显得更客观一些，因为只是描述“是什么”、“有什么”，而不是描述别人的行为。
+而think已经在描述别人的行为了。描述别人的行为总是比较危险，而表达起来
+也更困难一些，容易造成无法很好地完成句子的尴尬。
+
+从even、totally wrong、stop doing it能看出来作者语气还是挺重的。
+
+> but as long as you don't actually specify it, the question is quite
+> nonsensical indeed.
+
+indeed是non-native speaker很少用的一个词。一般我们会说：the question
+is nonsensical。加上quite和indeed有什么好处？我认为加上这两个词以后，
+这句话表达的就是我的观点。如果没有它们，就显得这已经是冷冰冰的事实了。
+
+> there are also some real gems among the results for writting.
+
+这里面也有一些有用的东西。我会译成：there are also some
+useful/valuable points/things/stuffs in it.
+
+real gems就代表了有用的东西。比我们用的things/stuffs生动多了。但像这样
+的表达方式放在口语应该没问题，不过如果用在和non-native speaker对话的话
+估计就容易翻车了。

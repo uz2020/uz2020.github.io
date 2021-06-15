@@ -162,3 +162,19 @@ facts剔除掉了。
 ## main idea
 
 main idea无非是xxx is blah blah blah, xxx has blah blah blah.
+
+## 欲扬先抑
+
+Scarlett O'Hara was not beautiful, but men seldom realized it when
+caught by her charm as the Tarleton twins were.
+
+Gone with the wind第一章第一句就把一个角色的主要特点写出来了。而且作者
+不是用陈述句比如：Scarlett O'Hara was a charming woman。他先说了她的缺
+点，而后再用男人被她吸引来侧面衬托她的charming，这样读者就不禁好奇，究
+竟是什么让一个不漂亮的女人那么charming呢？而且作者这么写还有一个好处，
+通过侧面烘托，似乎更具说服力。我们也可能会好奇这些男人又是一些什么人？
+原来这些男人就包含了Tarleton twins。那这对双胞胎又是什么人？
+
+这么简单的一句话，居然就把女人和男人都涉及了，而且并不显得突兀。小说一
+开始就假设读者在场景里面了，这就是作者和读者的互动吧。不仅把人物介绍了，
+作者还给读者留下了疑问，从而抓住读者的心。

@@ -119,10 +119,10 @@ real gems就代表了有用的东西。比我们用的things/stuffs生动多了�
 ... ~~不过还是用then比较自然一些吧。~~，但这时两种完全不同的含义。用
 then是表示步骤，而用secondly是在陈述第二个证据、观点和理由。
 
-我感觉写作如果是应付考试，并不需要特别强有力的说法。考试考察的是组织语
-言的能力。比如把观点有序陈列的能力，以及理清观点之间关系的能力。毕竟考
-试时间那么短，不可能思考得很有深度，考官也不会指望考生能在二三十分钟内
-写出很正式的文章来。
+我感觉写作如果是应付考试，并不需要特别强有力或眼光独到的观点。考试考察
+的是组织语言的能力。比如把观点有序陈列的能力，以及理清观点之间关系的能
+力。毕竟考试时间那么短，不可能思考得很有深度，考官也不会指望考生能在二
+三十分钟内写出很正式的文章来。
 
 ### logical order
 
@@ -161,9 +161,12 @@ facts剔除掉了。
 
 ## main idea
 
-main idea无非是xxx is blah blah blah, xxx has blah blah blah.
+main idea无非是... is ..., ... has ... 如：
 
-## 欲扬先抑
+1. Philately is an interesting hobby.
+2. China has the largest population in the world.
+
+## Gone with the wind (ch1, p1)
 
 > Scarlett O'Hara was not beautiful, but men seldom realized it when
 > caught by her charm as the Tarleton twins were.
@@ -178,3 +181,79 @@ Gone with the wind第一章第一句就把一个角色的主要特点写出来�
 这么简单的一句话，居然就把女人和男人都涉及了，而且并不显得突兀。小说一
 开始就假设读者在场景里面了，这就是作者和读者的互动吧。不仅把人物介绍了，
 作者还给读者留下了疑问，抓住了读者的心。
+
+如果一个不小心，也可能写成罗嗦版本： but men seldom realized it when
+they were caught by ...
+
+> In her face were too sharply blended the delicate features of her
+> mother, a Coast aristocrat of French descent, and the heavy ones of
+> her florid Irish father.
+
+1. In her face作为主语有点奇怪，介词In不会多余吗？但我读过一些作品中像
+   这样的用法确实也偶尔出现，所以觉得很自然。仔细一想语法，反倒觉得有
+   些奇怪。
+2. too单独使用是要达到什么效果？
+3. sharply blended是固定用法。
+4. 后裔：descent。
+5. 一个逗号，进一步说明她母亲的特点，如果不使用逗号，那就要用从句了。
+   从句写得越长，读者读得越辛苦，而且也容易写失败。巧妙应用标点符号有
+   很大的好处。
+6. heavy对比delicate、ones对应features，精简的表达读起来更有意思。为什
+   么不能用heavy features？当然是完全可以的，从数学的角度来看，它们并
+   没有任何区别。但ones有个好处是让读者知道现在讲的仍然是同样的属性，
+   只不过是另外一个对象的而已。若继续用features，反倒有不好的效果，重
+   复的单词容易使人麻木，昏昏欲睡，并且觉得作者就知道那么点东西。
+   
+我认为Gone with the wind的开场白采用的是by detail和by space两种logical
+order组织方式。总体上by detail，局部by space。从第一句全面地概括了
+Scarlett O'Hara的特点，进而一步步变得详细，比如继承了父母的特征，脸部
+轮廓，然后着重描写了眼睛，再通过by space的方式把眼睛上面的brow也描写了
+一下，最终又从brow延伸至skin，说brow在skin上形成了一条重要的line。作者
+似乎就在画画。于是我能明白为什么很多喜欢语文的人也爱画画。
+
+再看看怎么描写的脸部特征。
+
+> But it was an arresting face, pointed of chin, square of jaw.
+
+依旧很简洁。用词arresting和前面的caught by her charm呼应。看似简单的一
+个用词，却体现了作者的功力。后面又继续对这张arresting face做进一步说明。
+还是old style，一个逗号之后，就是两个短语。同样是... of ...。但又和前
+面用法有所不同，前面是名词an aristocrat，这里是形容词pointed。前面的名
+词是可以完全指代mother的，后面的则是部分特征。这一句也可以这样写：But
+it was an arresting face with a pointed chin and a square jaw. 效果有
+何不同？作者的写法，让读者在读完arresting face之后可以停顿，很清楚后面
+两句只是为了补充说明。另外，总不能写But it was an arresting face, a
+pointed chin, a square jaw吧，语法都错了，出现了多个主语。arresting
+face之后应该用一些形容词，但这些形容词又不是直接作用于face的，而是作用
+于face的各个局部。我们也可以这么写But it was an arresting face, large,
+dull。这样large和dull都直接形容这个脸。然而如果使用了of，那就能更具体
+地表示该特点指的是face的哪个部分。
+
+总结固定表达：
+
+1. pointed chin
+2. square jaw
+3. arresting face
+
+> Her eyes were pale green without a touch of hazel, starred with
+> bristly black lashes and slightly tilted at the ends.
+
+虽然没有用什么空间介词，但前面讲到脸，这里讲眼睛，也算是development by
+space了。接下来的一句更明显：
+
+> Above them, her thick black brows slanted upward, cutting a
+> startling oblique line in her magnolia-white skin -- that skin so
+> prized by Southern women and so carefully guarded with bonnets,
+> veils and mittens against hot Georgia suns.
+
+一起来看这一句和上面的那句。眼睛是整个脸部最吸引人的部分，单独出来来描
+写很合理，尤其是写重要的人物。举一反三，眼睛的颜色：
+
+1. pale green
+2. dark black
+3. crystal blue
+
+without a touch of hazel这个固定用法不好掌握。我知道作者说的是这种颜色
+的纯粹干净，但如果让我们去写，without a什么呢？我们就编不下去了。这里
+的touch是否可以换成spot？但hazel可以换成什么？适合在什么场景下使用？这
+都是要通过举一反三去想明白的。

@@ -40,9 +40,6 @@ i这个音时，就需要double了。但大家都知道即使double，对在发�
 
 ## Learn skills from everywhere
 
-在研究这个writing or writting问题时我找到了在english.stackexchange.com
-上面的回复。学到一些表达方式，具体如下阐述。
-
 > Easy as pie.
 
 为何这么表达？请容我三思再作答未迟。我猜测这句话表达了一个不好的语气，
@@ -57,8 +54,6 @@ foreign speaker总是很容易陷入一个直译的陷阱。想要表达明白�
 是understand，换个思路之后，用have an idea of好像就变得地道很多了？当
 然即使是地道的说法，也不能一个劲地用，要注意表达方式的多样性。表达可以
 作为工具，但也可以成为艺术，就看每个人的追求是什么了。
-
-好了，我有一些累了。学海无涯，等我养精蓄锐之后，与之再战三百回合岂不妙哉！
 
 > This is a nonsense question.
 
@@ -132,6 +127,16 @@ real gems就代表了有用的东西。比我们用的things/stuffs生动多了�
 1. your first encounter with，~~your first time to see/meet~~ 第一次接触
 2. spend a little extra time doing，关于时间的固定搭配。v.s. he just
    needs a moment to...
+   
+
+> A sequential program may call one function and then call the other,
+> but in a concurrent program with two or more goroutines, calls to
+> both functions can be active at the same time.
+
+1. call one function and then **call** the other. 不要漏了后面这个call
+2. calls to both function can be active..., call直接做名词用，和active
+   搭配。如果用invoke，就得用invocation，显得更加复杂。active应用场景
+   很多，难以掌握，什么可以active？
 
 ## 写段落
 

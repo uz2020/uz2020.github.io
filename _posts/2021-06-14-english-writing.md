@@ -104,6 +104,35 @@ real gems就代表了有用的东西。比我们用的things/stuffs生动多了�
 1. needs a moment，比need some time更地道一些
 2. gather himself，恢复，比restore、recover更准确
 
+> Concurrent programming, the expression of a program as a composition
+> of several autonomous activities, has never been more important than
+> it is today.
+
+1. 三段式，第一段：主语，第二段：具体定义，第三段：观点。这种句式写作中很常见。
+2. has never been more important than it is today，比起... is very important in modern time更地道一些。
+
+> Even though Go's support for concurrency is one of its great
+> strengths, reasoning about concurrent programs is inherently harder
+> than about sequential ones, and intuitions acquired from sequential
+> programming may at times lead us astray.
+
+1. even though的使用
+2. intuitions acquired from ..., knowledge acquired from ... 还有什么
+   可以acquired from？
+3. at times, ~~sometimes~~
+4. lead us astray ~~point us to the wrong direction~~
+5. is one of its great strengths, ~~is a big advantage~~
+6. reasoning about sth. 固定搭配 ~~thinking about~~
+7. is inherently harder than. ~~more difficult than~~
+
+> If this is your first encounter with concurrency, we recommend
+> spending a little extra time thinking about the examples in these
+> two chapters.
+
+1. your first encounter with，~~your first time to see/meet~~ 第一次接触
+2. spend a little extra time doing，关于时间的固定搭配。v.s. he just
+   needs a moment to...
+
 ## 写段落
 
 虽然我们都喜欢洋洋洒洒地写文章，但写出来的效果还是要看我们是否有一个清

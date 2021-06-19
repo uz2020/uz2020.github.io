@@ -137,6 +137,12 @@ real gems就代表了有用的东西。比我们用的things/stuffs生动多了�
 2. calls to both function can be active..., call直接做名词用，和active
    搭配。如果用invoke，就得用invocation，显得更加复杂。active应用场景
    很多，难以掌握，什么可以active？
+   
+> I have an announcement to make ...
+
+> What was your big announcement?
+
+> It's continuing by plan regardless of trolling.
 
 ## 写段落
 

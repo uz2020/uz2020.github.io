@@ -5,7 +5,7 @@ title:  "Work Harder"
 
 晚上两点，总算把项目的主要流程调通，明天再写点业务逻辑就好。
 
-从昨晚了解了nsq，到今天把它应用起来，效果还算不错，不该解耦的部分解耦出来了，逻辑更加清晰。
+从昨晚了解了nsq，到今天把它应用起来，效果还算不错，把该解耦的部分解耦出来了，逻辑更加清晰。
 
 把nsq安装在了docker里。启动没有问题，请求就出问题了。首先docker-compose.yml有地方是遗漏的。比如端口的转换和nsqd没有设置broadcast ip。这就导致外部的client通过nsqlookupd请求nsqd的服务时，client并不能正确地访问nsqlookupd返回的remote_address。
 

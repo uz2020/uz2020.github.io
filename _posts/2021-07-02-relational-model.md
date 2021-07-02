@@ -14,10 +14,35 @@ table这个词，对于non-native speaker而言，也许难以领会其真谛。
 
 这么严谨的定义，抄下来也挺费劲。主要就是关注到它被用于展示一些事实或者一些关系。
 
-table的好处就是简洁明了，如同我老板说过，HTTP之所以流行起来也是因为它是明文的，是简洁的。table也可以被称为relation。而数据库则由由relations组成。有了这些table，就要去思考怎么方便查询里面的记录了。我们不仅需要查到单个记录，还要查到一些有关系的记录或则满足条件的多条记录，这就对DBMS提出了更高的要求。
+table的好处就是简洁明了，如同我老板说过，HTTP之所以流行起来也是因为它是明文的，是简洁的。table也可以被称为relation。而数据库则由relations组成。有了这些table，就要去思考怎么方便查询里面的记录了。我们不仅需要查到单个记录，还要查到一些有关系的记录或则满足条件的多条记录，这就对DBMS提出了更高的要求。
 
-这些查询和操作数据的指令，用SQL来表示。SQL作为一门DDL，很好地简化了用户的操作。在我们的日常工作中，似乎所用过的DDL也就只有SQL了。简单的使用数据库自然不需要知道db engine是如何处理SQL语句的，但高级用户就要去了解了。
+这些查询和操作数据的指令，用SQL来表示。SQL作为一门DSL，很好地简化了用户的操作。在我们的日常工作中，似乎所用过的DSL也就只有SQL了。简单的使用数据库自然不需要知道db engine是如何处理SQL语句的，但高级用户就要去了解了。
 
 relation由schema和instance组成。schema就是header，而instance就是table。header定义了field已经每个field的domain，domain由domain name来表示。domain name就是“string、integer、real”这些。但schema在数据库实际的使用中，却有另外一个含义，不是header的意思，容易搞混。domain指定的就是这个field有一个固定的a set of associated values。就和我们在数学里描述有理数域、复数域一样。
 
 tuples、records、rows都是一样的意思。
+
+update语句可以使用选中record的field value来计算得到目标值，再设置：
+
+```sql
+update students s
+set s.age=s.age+1,s.gpa=s.gpa-1
+where s.sid=53688
+```
+
+现在的数据库很多都支持upsert操作了。
+
+
+## IC （integrity constraints）
+
+除了domain constraints以外，还有以下constraints：
+
+1. key constraints
+2. foreign key constraints
+3. general constraits
+
+superkey, which is a set of fields that contains a key.
+
+> No subset of the set of fields in a key is a unique identifier for a tuple.
+
+也就是key一定是能够用来区分记录的最少的fields。比如当sid已经能够区分（identify）每条学生记录了，那{sid, name}就是多余的，它不能成为key，只能被称作是superkey。

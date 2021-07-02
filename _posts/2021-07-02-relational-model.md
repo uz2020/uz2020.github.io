@@ -1,0 +1,23 @@
+---
+layout: post
+---
+
+在relational model出现以前，数据库都是以hierarchical model和network model来看待数据的。1970s年代，Codd提出了relational model，于是DBMS产业就渐渐由RDBMS占领了。甚至现在只要提到DBMS，人们就默认你是在说RDBMS。
+
+在RDBMS风行的早期，先驱者是IBM和UC Berkeley。IBM的DB2现在还在有的领域被广泛采用，而Berkeley的PostgreSQL也渐渐在互联网行业流行起来。在我刚毕业的时候，基本上无论招聘还是简历上写的最多的都是精通mysql，但现在已经开始有了有PostgreSQL的使用经验。
+
+数据库这个行业，在几十年前其市场估值就已经到达了multibillion dollars了。这个行业真的很有搞头。但我身边有的同事却不愿意成为一名优秀的dba，我也不懂为什么。就算写再多的业务代码，也不一定比搞数据库有意思吧？况且业务有时真的很烦人，但是通过写业务代码来生存的人的数量应该是非常庞大的，因为门槛更低。写代码也是有食物链的吧。
+
+table这个词，对于non-native speaker而言，也许难以领会其真谛。以下是它在字典里的定义：
+
+> An arrangement of words, numbers, or signs ..., as in parallel columns, to exhibit a set of facts or relations in a definite, compact and comprehensive form.
+
+这么严谨的定义，抄下来也挺费劲。主要就是关注到它被用于展示一些事实或者一些关系。
+
+table的好处就是简洁明了，如同我老板说过，HTTP之所以流行起来也是因为它是明文的，是简洁的。table也可以被称为relation。而数据库则由由relations组成。有了这些table，就要去思考怎么方便查询里面的记录了。我们不仅需要查到单个记录，还要查到一些有关系的记录或则满足条件的多条记录，这就对DBMS提出了更高的要求。
+
+这些查询和操作数据的指令，用SQL来表示。SQL作为一门DDL，很好地简化了用户的操作。在我们的日常工作中，似乎所用过的DDL也就只有SQL了。简单的使用数据库自然不需要知道db engine是如何处理SQL语句的，但高级用户就要去了解了。
+
+relation由schema和instance组成。schema就是header，而instance就是table。header定义了field已经每个field的domain，domain由domain name来表示。domain name就是“string、integer、real”这些。但schema在数据库实际的使用中，却有另外一个含义，不是header的意思，容易搞混。domain指定的就是这个field有一个固定的a set of associated values。就和我们在数学里描述有理数域、复数域一样。
+
+tuples、records、rows都是一样的意思。

@@ -46,3 +46,24 @@ superkey, which is a set of fields that contains a key.
 > No subset of the set of fields in a key is a unique identifier for a tuple.
 
 也就是key一定是能够用来区分记录的最少的fields。比如当sid已经能够区分（identify）每条学生记录了，那{sid, name}就是多余的，它不能成为key，只能被称作是superkey。
+
+## drop table
+
+删除表一定要指定restrict或cascade：
+
+```sql
+drop table students restrict
+drop table students cascade
+```
+
+restrict表示如果有其它表引用了students，那么就会删除失败。cascade表示如果其它表引用了students表的数据，那么连带地删除掉。
+
+平时我们都是drop table students而已，这应该是省略了restrict吧？
+
+## 外键
+
+由于外键在实践中总是问题多多，慢慢地好像就被弃用了。但现在的orm库都是支持外键的，我很好奇一些大公司的复杂的业务是怎么设计数据库表的，他们有没有用到外键呢？
+
+```sql
+foreign key (studid) references Students
+```

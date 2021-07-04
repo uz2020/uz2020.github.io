@@ -24,8 +24,10 @@ type product struct {
 
 ```
 
-当它发现key constraint violations时，就会变成一条update的语句。clause.OnConflict可以指定冲突的column，如果不指定，那就是primary key。UpdateAll则表示当发生冲突时更新的策略是全部columns更新（除了primary key），还是部分columns更新。
+当它发现key constraint violations时，就会变成一条update的语句。clause.OnConflict可以指定冲突的column，如果不指定，那默认就是primary key。UpdateAll则表示当发生冲突时更新记录的策略是：全部columns更新（除了primary key），还是部分columns更新。
 
 有了这个upsert，就可以把插入记录和更新记录统一起来了。之前我还以为很难实现。
 
 那么这个upsert的底层原理是什么？数据库支持这种机制，还是gorm帮我们执行了多一条select语句来判断是否冲突？有待研究。
+
+接下来可能又有一个新的项目要做，这次是做管理后台了。又是一个好机会锻炼我的数据库方面的能力，同时也是一个大挑战。

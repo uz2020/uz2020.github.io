@@ -67,3 +67,15 @@ restrict表示如果有其它表引用了students，那么就会删除失败。c
 ```sql
 foreign key (studid) references Students
 ```
+
+## ER model
+
+还没读完ER model就来读relational model，就像是还没考完科目一就来学倒车入库一样。
+
+终于，来到了关于数据库设计的部分。现在很多人都直接设计table。但这种做法不值得提倡，正确的做法应该是先画出ER model，再翻译成a collection of tables（即a relational database schema）。
+
+relational model相关的技巧虽然更接近于SQL，但有时我们还真的想要远离一下SQL，使我们能够一览众山小。
+
+### Key Constraints
+
+即one-to-many，many-to-many，one-to-one关系。

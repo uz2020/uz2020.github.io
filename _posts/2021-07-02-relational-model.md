@@ -79,3 +79,11 @@ relational model相关的技巧虽然更接近于SQL，但有时我们还真的�
 ### Key Constraints
 
 即one-to-many，many-to-many，one-to-one关系。
+
+用箭头表示。（箭头是determine的意思，指向关系。关系用菱形表示。总的意思就是一个entity可以决定relationship sets中的一个relationship，这就是one。如果关系的另外一头也是箭头，那就是one-to-one，否则，就是one-to-many。如果一个箭头都没有，就说明了entity可以参与到多个关系中，那就是many-to-many）
+
+### Participation Constraints
+
+除了Key Constraints以外，还有Participation Constraints。后者表示一个entity set是否完全参与某个关系。是total还是partial。
+
+用粗线表示。

@@ -87,3 +87,14 @@ relational model相关的技巧虽然更接近于SQL，但有时我们还真的�
 除了Key Constraints以外，还有Participation Constraints。后者表示一个entity set是否完全参与某个关系。是total还是partial。
 
 用粗线表示。
+
+### 其它
+
+ER model的设计需要考虑的问题如：
+
+1. 一个概念应该抽象成entity还是attribute？
+2. 一个概念应该抽象成entity还是relationship?
+3. 应该用binary relationship还是ternary?
+4. 什么时候用aggregation?
+
+这些问题在我们平时设计数据库表时都是要考虑的，但我们都是凭感觉。当作者把这几点抽出来总结，我们读起来却感到枯燥。也许是因为平时我们都直接上手relational model设计，没有经过ER model设计这一步。

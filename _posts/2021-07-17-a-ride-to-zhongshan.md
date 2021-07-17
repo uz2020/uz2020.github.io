@@ -14,4 +14,4 @@ I stayed at home for two days after this ride trip. Something has changed inside
 
 I opened the map to see how far I have gone. It says there is 20km from my place to Zhongshan. I definitely didn't follow the shortest path. I guess I must have rode for more than 60km that night.
 
-I want to know more about the city I live or the city nearby. But it's different without the help of an automobile.
+I want to know more about the city I live or the cities nearby. But it's different without the help of an automobile.

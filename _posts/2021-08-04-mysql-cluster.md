@@ -53,3 +53,18 @@ ALTER USER 'root'@'localhost' IDENTIFIED BY 'MyNewPass';
 ```bash
 docker run -it --net=cluster mysql/mysql-cluster ndb_mgm
 ```
+
+```
+ndb_mgm> show
+Cluster Configuration
+---------------------
+[ndbd(NDB)]	2 node(s)
+id=2	@192.168.0.3  (mysql-8.0.26 ndb-8.0.26, Nodegroup: 0, *)
+id=3	@192.168.0.4  (mysql-8.0.26 ndb-8.0.26, Nodegroup: 0)
+
+[ndb_mgmd(MGM)]	1 node(s)
+id=1	@192.168.0.2  (mysql-8.0.26 ndb-8.0.26)
+
+[mysqld(API)]	1 node(s)
+id=4	@192.168.0.10  (mysql-8.0.26 ndb-8.0.26)
+```

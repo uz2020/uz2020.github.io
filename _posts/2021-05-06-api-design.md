@@ -108,3 +108,106 @@ database handle使用单例模式。无论在哪个package中操作数据库都�
 
 防止恶意请求注册。
 
+### response
+
+注册或创建记录成功后，返回的不应该是整个model的数据，而应该有所调整，比如返回token而非password。
+
+而这个响应的json，应该是另外一个结构体了。
+
+三个struct：
+1. 请求
+2. 数据库
+3. 响应
+
+### gorm.Model
+
+### Token
+
+go jwt lib: github.com/golang-jwt/jwt
+
+#### 生成token
+
+```go
+	jwt_token := jwt.New(jwt.GetSigningMethod("HS256"))
+	jwt_token.Claims = jwt.MapClaims{
+		"id":  id,
+		"exp": time.Now().Add(time.Hour * 24).Unix(),
+	}
+	token, _ := jwt_token.SignedString([]byte(SecretPassword))
+```
+
+jwt包含JOSE Header、claims set和signature。
+
+这里的id是private claim，只是用于传达id这个信息。而jwt lib本身应该去思想registered claims如exp的逻辑。claims部分是我们需要填充的。
+
+签名需要指定算法和密钥。
+
+#### 校验token
+
+package: github.com/golang-jwt/jwt/request
+
+```go
+		token, err := request.ParseFromRequest(c.Request, MyAuth2Extractor, func(token *jwt.Token) (interface{}, error) {
+			b := ([]byte(common.SecretPassword))
+			return b, nil
+		})
+        
+		if err != nil {
+			c.AbortWithError(http.StatusUnauthorized, err)
+			return
+		}
+
+		if claims, ok := token.Claims.(jwt.MapClaims); ok && token.Valid {
+			myUserId := uint(claims["id"].(float64))
+			UpdateContextUserModel(c, myUserId)
+		}
+```
+
+面去我们手工从http header中抽取token的过程，jwt的request package帮我们完成。如果没有拿到token或者token有问题，那么都体现在返回的error中。
+
+得到token之后，先将token claims转化为map。再从claims中获取user id，更新上下文（c.Set）。
+
+token这种使用场景，就是典型的middleware使用场景。很多请求都需要在通过这个middleware的验证之后，才允许进行下一步操作。
+
+#### 截取token
+
+为了支持多种传递token的方式，request.ParseFromRequest需要我们写一个extractor。extractor提供了比回调函数更为通用的抽象。
+
+request.ParseFromRequest要求extractor实现接口就可以。所以我们既可以采用HeaderExtractor也可以采用ArgumentExtractor，还可以采用MultiExtractor。
+
+ArgumentExtractor比较简单，可以指定多个GET参数作为key或者POST Form参数。
+
+HeaderExtractor类似于ArgumentExtractor。
+
+还有一个PostExtractionFilter。它有两个步骤：
+1. 先用ArgumentExtractor或HeaderExtractor获取整个token
+2. 再对token做一定的处理（调用自定义的filter函数）
+
+MultiExtractor则是，当我们需要支持各种花样的extractor时可以用到。
+
+
+### 登录验证
+
+password hash生成过程：
+
+```go
+	bytePassword := []byte(password)
+	passwordHash, _ := bcrypt.GenerateFromPassword(bytePassword, bcrypt.DefaultCost)
+	u.PasswordHash = string(passwordHash)
+```
+
+1. 真实密码转成[]byte
+2. 利用bcrypt计算出password hash
+
+bcrypt提供的GenerateFromPassword满足了这个场景。
+
+比对密码过程：
+
+```go
+	bytePassword := []byte(password)
+	byteHashedPassword := []byte(u.PasswordHash)
+	return bcrypt.CompareHashAndPassword(byteHashedPassword, bytePassword)
+```
+
+相应地还是将密码明文和密码哈希转成[]byte，再用bcrypt的CompareHashAndPassword函数来比对。
+

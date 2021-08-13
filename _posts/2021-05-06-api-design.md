@@ -169,6 +169,8 @@ package: github.com/golang-jwt/jwt/request
 
 token这种使用场景，就是典型的middleware使用场景。很多请求都需要在通过这个middleware的验证之后，才允许进行下一步操作。
 
+除了提供自定义的MyAuth2Extractor之外，request.ParseFromRequest还需要另外一个回调函数来给它提供密钥。
+
 #### 截取token
 
 为了支持多种传递token的方式，request.ParseFromRequest需要我们写一个extractor。extractor提供了比回调函数更为通用的抽象。
@@ -211,3 +213,36 @@ bcrypt提供的GenerateFromPassword满足了这个场景。
 
 相应地还是将密码明文和密码哈希转成[]byte，再用bcrypt的CompareHashAndPassword函数来比对。
 
+
+## CURD: U
+
+更新信息时提交的请求是部分信息。如果继续采用Create时用的那个validator就不合适了。使用那个validator就会报错比如：缺少字段。
+
+有个技巧，复用validator。那就是在validate Bind之前先用context里的数据进行填充。
+
+但还有一个问题。当我们用context中的model来填充validator里的input model时，我们无法去填充password这样的字段。因为数据库里存的就是hash。这时我们把它设置成一个随机值。直到我们要更新记录时，我们判断看到validator里的password是随机值，那就说明用户并没有修改密码。
+
+更新完数据库之后，context也要记得更新。
+
+token里的claims包含的是id信息，所以即使我们修改了user信息，token还是可以继续使用的。
+
+### gorm的使用
+
+update:
+
+```go
+	db := common.GetDB()
+	err := db.Model(u).Updates(data).Error
+```
+
+u和data都是model，这里是用data去更新u。
+
+create:
+
+```go
+	db := common.GetDB()
+	err := db.Create(data).Error
+	return err
+```
+
+我们拿着err，就知道执行成功与否了。

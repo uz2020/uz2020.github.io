@@ -88,3 +88,10 @@ LiveReload address: http://0.0.0.0:35729
 
 有了docker，我就可以安心地在后台跑服务了。妈妈再也不用担心我的屏幕上放
 着多余的terminal了。
+
+
+## 完整部署命令
+
+```sh
+docker run -it  -p 4000:4000 -p 35729:35729 -v $(pwd):/site --name jekyll bretfisher/jekyll-serve bundle exec jekyll serve -l -H 0.0.0.0
+```

@@ -32,6 +32,9 @@ future: false
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-paginate
+
+paginate: 5  
 
 defaults:
   - scope:
@@ -58,3 +61,12 @@ defaults:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+collections:
+  techs:
+    output: true
+  lifes:
+    output: true
+  mysql:
+    output: true
+    

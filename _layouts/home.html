@@ -4,29 +4,94 @@ layout: default
 
 <div class="home">
   {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
+  <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
 
   {{ content }}
 
-  {%- if site.posts.size > 0 -%}
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link current" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
+  <h1 class="page-heading">博客整理中</h1>
 
+  {%- if site.mysql.size > 0 -%}
+  <h1 class="page-heading">mysql</h1>
+  <ul class="post-list">
+    {%- for mysql in site.mysql -%}
+    <li>
+      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+      <span class="post-meta">{{ mysql.date | date: date_format }}</span>
+      <h3>
+        <a class="post-link current" href="{{ mysql.url | relative_url }}">
+          {{ mysql.title | escape }}
+        </a>
+      </h3>
+      {%- if site.show_excerpts -%}
+      {{ mysql.excerpt }}
+      {%- endif -%}
+    </li>
+    {%- endfor -%}
+  </ul>
+  {%- endif -%}
+
+
+  {%- if site.techs.size > 0 -%}
+  <h1 class="page-heading">技术</h1>
+  <ul class="post-list">
+    {%- for tech in site.techs -%}
+    <li>
+      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+      <span class="post-meta">{{ tech.date | date: date_format }}</span>
+      <h3>
+        <a class="post-link current" href="{{ tech.url | relative_url }}">
+          {{ tech.title | escape }}
+        </a>
+      </h3>
+      {%- if site.show_excerpts -%}
+      {{ tech.excerpt }}
+      {%- endif -%}
+    </li>
+    {%- endfor -%}
+  </ul>
+  {%- endif -%}
+
+
+  {%- if site.lifes.size > 0 -%}
+  <h1 class="page-heading">生活</h1>
+  <ul class="post-list">
+    {%- for life in site.lifes -%}
+    <li>
+      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+      <span class="post-meta">{{ life.date | date: date_format }}</span>
+      <h3>
+        <a class="post-link current" href="{{ life.url | relative_url }}">
+          {{ life.title | escape }}
+        </a>
+      </h3>
+      {%- if site.show_excerpts -%}
+      {{ life.excerpt }}
+      {%- endif -%}
+    </li>
+    {%- endfor -%}
+  </ul>
+  {%- endif -%}
+
+
+
+  {%- if site.posts.size > 0 -%}
+  <ul class="post-list">
+    {%- for post in site.posts -%}
+    <li>
+      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+      <span class="post-meta">{{ post.date | date: date_format }}</span>
+      <h3>
+        <a class="post-link current" href="{{ post.url | relative_url }}">
+          {{ post.title | escape }}
+        </a>
+      </h3>
+      {%- if site.show_excerpts -%}
+      {{ post.excerpt }}
+      {%- endif -%}
+    </li>
+    {%- endfor -%}
+  </ul>
   {%- endif -%}
 
 </div>

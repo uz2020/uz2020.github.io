@@ -3,7 +3,9 @@ layout: post
 title: ubuntu启动慢的可能原因
 ---
 
-> Gave up waiting for resume from suspend.
+```
+Gave up waiting for resume from suspend.
+```
 
 今天的ubuntu出现这种情况，以至于启动接近一分钟才进入系统，后来在kernel cmd补充resume的配置就可以了。
 
